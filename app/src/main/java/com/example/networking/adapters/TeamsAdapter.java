@@ -1,4 +1,4 @@
-package com.example.networking;
+package com.example.networking.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.networking.Model.Team;
+import com.example.networking.R;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
     private ArrayList<Team> teams;
     private View.OnClickListener onClickListener;
 
-    TeamsAdapter(ArrayList<Team> teams) {
+    public TeamsAdapter(ArrayList<Team> teams) {
         this.teams = teams;
     }
 

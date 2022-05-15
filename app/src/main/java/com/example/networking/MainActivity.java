@@ -6,7 +6,9 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.view.View;
 
-import com.bumptech.glide.Glide;
+import com.example.networking.activities.GamesActivity;
+import com.example.networking.activities.StandingsActivity;
+import com.example.networking.activities.TeamsActivity;
 
 public class MainActivity extends AppCompatActivity
 {

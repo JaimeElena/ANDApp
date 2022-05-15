@@ -1,13 +1,14 @@
-package com.example.networking;
+package com.example.networking.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.networking.Model.Team;
+import com.example.networking.R;
+import com.example.networking.adapters.TeamsAdapter;
 
 import java.util.ArrayList;
 
