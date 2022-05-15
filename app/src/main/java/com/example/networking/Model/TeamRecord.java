@@ -26,4 +26,9 @@ public class TeamRecord
     {
         return points;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(points);
+    }
 }

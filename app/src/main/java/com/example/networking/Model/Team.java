@@ -48,6 +48,6 @@ public class Team
 
     public String toString()
     {
-        return String.format("The team is %s", name);
+        return String.format(name);
     }
 }

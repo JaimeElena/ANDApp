@@ -7,6 +7,8 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.networking.Model.GameResponseClass;
 import com.example.networking.Model.ResponseClass;
+import com.example.networking.Model.StandingTeam;
+import com.example.networking.Model.StandingsResponseClass;
 import com.example.networking.Model.Team;
 import com.example.networking.Model.TempGame;
 
@@ -24,12 +26,14 @@ public class BasketballRepository
     private final MutableLiveData<Team> searchedTeam;
     private final MutableLiveData<List<TempGame>> gamesByDate;
     private final MutableLiveData<List<Team>> allTeams;
+    private final MutableLiveData<List<StandingTeam>> standings;
 
     private BasketballRepository()
     {
         searchedTeam = new MutableLiveData<Team>();
         gamesByDate = new MutableLiveData<List<TempGame>>();
         allTeams = new MutableLiveData<List<Team>>();
+        standings = new MutableLiveData<>();
     }
 
     public static  synchronized BasketballRepository getInstance()
@@ -48,6 +52,14 @@ public class BasketballRepository
 
     public MutableLiveData<List<TempGame>> getGamesByDate() {
         return gamesByDate;
+    }
+
+    public MutableLiveData<Team> getSearchedTeam() {
+        return searchedTeam;
+    }
+
+    public MutableLiveData<List<StandingTeam>> getStandings() {
+        return standings;
     }
 
     public void searchForTeam(int teamId) {
@@ -98,7 +110,7 @@ public class BasketballRepository
             });
         }
 
-    public void getAllGames(){
+    public void getAllTeams(){
         BasketballApi basketballApi = ServiceGenerator.getBasketballApi();
         Call<ResponseClass> call = basketballApi.getAllTeams();
         call.enqueue(new Callback<ResponseClass>() {
@@ -116,6 +128,31 @@ public class BasketballRepository
             @EverythingIsNonNull
             @Override
             public void onFailure(Call<ResponseClass> call, Throwable t) {
+                Log.i("Retrofit", "Something went wrong :( " + t.getMessage());
+
+            }
+        });
+    }
+
+    public void getStandingsByConference(String conference)
+    {
+        BasketballApi basketballApi = ServiceGenerator.getBasketballApi();
+        Call<StandingsResponseClass> call = basketballApi.getStandingsByConference(conference, "standard", "2021");
+        call.enqueue(new Callback<StandingsResponseClass>() {
+            @EverythingIsNonNull
+            @Override
+            public void onResponse(Call<StandingsResponseClass> call, Response<StandingsResponseClass> response) {
+                if (response.isSuccessful()) {
+                    standings.setValue(response.body().getResponse());
+                    Log.i("Header", response.headers().toString());
+                    Log.i("Complete response", String.valueOf(response.code()));
+                    Log.i("Success", response.body().getResponse().toString());
+                }
+            }
+
+            @EverythingIsNonNull
+            @Override
+            public void onFailure(Call<StandingsResponseClass> call, Throwable t) {
                 Log.i("Retrofit", "Something went wrong :( " + t.getMessage());
 
             }
