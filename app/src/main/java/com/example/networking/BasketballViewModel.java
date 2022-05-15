@@ -3,7 +3,6 @@ package com.example.networking;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.networking.Model.Game;
 import com.example.networking.Model.Team;
 import com.example.networking.Model.TempGame;
 

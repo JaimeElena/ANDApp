@@ -6,12 +6,14 @@ public class TempGame
     private String league;
     private String season;
     private Score scores;
+    private Teams teams;
 
-    public TempGame(int id, String league, String season, Score scores) {
+    public TempGame(int id, String league, String season, Score scores, Teams teams) {
         this.id = id;
         this.league = league;
         this.season = season;
         this.scores = scores;
+        this.teams = teams;
     }
 
     public int getId() {
@@ -30,8 +32,12 @@ public class TempGame
         return scores;
     }
 
+    public Teams getTeams() {
+        return teams;
+    }
+
     public String toString()
     {
-        return "Id: " + id + " League: " + league + " Season: " + season  + " Visitor score: " + scores.getVisitors().getPoints() + " Locals score: " + scores.getLocals().getPoints();
+        return "Id: " + id + " League: " + league + " Season: " + season + " "  + teams.getVisitor().getName()  +  " " + scores.getVisitors().getPoints() + " - "  + teams.getLocal().getName() + " "+ scores.getLocals().getPoints();
     }
 }

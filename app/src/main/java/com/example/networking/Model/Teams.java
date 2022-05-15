@@ -2,13 +2,20 @@ package com.example.networking.Model;
 
 public class Teams
 {
-    private Teams teams;
+    private Team visitors;
+    private Team home;
 
 
-    public Teams(Teams teams)
-    {
-        this.teams = teams;
+    public Teams(Team visitors, Team home) {
+        this.visitors = visitors;
+        this.home = home;
     }
 
+    public Team getVisitor() {
+        return visitors;
+    }
 
+    public Team getLocal() {
+        return home;
+    }
 }
