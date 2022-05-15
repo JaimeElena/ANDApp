@@ -1,6 +1,7 @@
 package com.example.networking.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.example.networking.BasketballViewModel;
 import com.example.networking.R;
 
 import java.util.Calendar;
@@ -18,10 +20,12 @@ public class GamesActivity extends AppCompatActivity {
     EditText date;
     DatePickerDialog datePickerDialog;
     Button button;
+    BasketballViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
+        viewModel = new ViewModelProvider(this).get(BasketballViewModel.class);
         date = (EditText) findViewById(R.id.date);
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +37,7 @@ public class GamesActivity extends AppCompatActivity {
                 datePickerDialog = new DatePickerDialog(GamesActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
-                        date.setText(dayOfMonth + "/" + (monthOfYear + 1 ) + "/" + year);
+                        date.setText(year + "-" + (monthOfYear + 1 ) + "-" + dayOfMonth);
                     }
                 }, mYear, mMonth, mDay);
                 datePickerDialog.show();
