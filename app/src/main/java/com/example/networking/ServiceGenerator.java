@@ -5,18 +5,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator
 {
-    private static BasketballApi basketballApi;
+    private static Retrofit.Builder  retrofitBuilder = new Retrofit.Builder()
+            .baseUrl("https://api-nba-v1.p.rapidapi.com/")
+            .addConverterFactory(GsonConverterFactory.create());
+    private static Retrofit retrofit = retrofitBuilder.build();
+
+    private static BasketballApi basketballApi = retrofit.create(BasketballApi.class);
 
     public static BasketballApi getBasketballApi()
     {
-        if(basketballApi == null)
-        {
-            basketballApi = new Retrofit.Builder()
-                    .baseUrl("https://v1.basketball.api-sports.io")
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build()
-                    .create(BasketballApi.class);
-        }
         return basketballApi;
     }
 }

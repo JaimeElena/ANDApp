@@ -1,24 +1,27 @@
 package com.example.networking.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Team
 {
-    private final int id;
-    private final String name;
-    private final String nickname;
-    private final String code;
-    private final String logo;
-    private final String city;
-    private final String conference;
+    private int id;
 
-    public Team(int id, String name, String nickname, String code, String logo, String city, String conference)
+    @SerializedName("name")
+    private String name;
+
+    private String nickname;
+
+    private String code;
+
+    private String city;
+
+    public Team(int id, String name, String nickname, String code, String city)
     {
         this.id = id;
         this.name = name;
         this.nickname = nickname;
         this.code = code;
-        this.logo = logo;
         this.city = city;
-        this.conference = conference;
     }
 
 
@@ -30,19 +33,10 @@ public class Team
         return code;
     }
 
-    public String getLogo() {
-        return logo;
-    }
 
     public String getCity() {
         return city;
     }
-
-    public String getConference() {
-        return conference;
-    }
-
-
 
     public int getId() {
         return id;
@@ -50,5 +44,10 @@ public class Team
 
     public String getName() {
         return name;
+    }
+
+    public String toString()
+    {
+        return String.format("The team is %s", name);
     }
 }
