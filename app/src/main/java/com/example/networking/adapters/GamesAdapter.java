@@ -10,15 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.networking.Model.Games;
+import com.example.networking.Model.TempGame;
 import com.example.networking.R;
 
 import java.util.List;
 
 public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.GamesViewHolder>{
-    List<Games> games;
+    List<TempGame> games;
     Activity activity;
 
-    public GamesAdapter(List<Games> games, Activity activity) {
+    public GamesAdapter(List<TempGame> games, Activity activity) {
         this.games = games;
         this.activity = activity;
     }

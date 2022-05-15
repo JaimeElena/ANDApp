@@ -22,7 +22,6 @@ public class TeamsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.hasFixedSize();
         ArrayList<Team> teams = new ArrayList<>();
-
         TeamsAdapter teamsAdapter = new TeamsAdapter(teams);
         recyclerView.setAdapter(teamsAdapter);
     }

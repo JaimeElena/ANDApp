@@ -22,7 +22,7 @@ public class BasketballViewModel extends ViewModel
         return repository.getSearchedTeams();
     }
 
-    LiveData<List<TempGame>> getGamesByDate(){return  repository.getGamesByDate();}
+    public LiveData<List<TempGame>> getGamesByDate(){return  repository.getGamesByDate();}
 
 
     public void searchForTeam(int id)
