@@ -12,7 +12,9 @@ import com.example.networking.Model.StandingsResponseClass;
 import com.example.networking.Model.Team;
 import com.example.networking.Model.TempGame;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -143,6 +145,8 @@ public class BasketballRepository
             @Override
             public void onResponse(Call<StandingsResponseClass> call, Response<StandingsResponseClass> response) {
                 if (response.isSuccessful()) {
+                    List<StandingTeam> tempList = response.body().getResponse();;
+                    Collections.sort(tempList);
                     standings.setValue(response.body().getResponse());
                     Log.i("Header", response.headers().toString());
                     Log.i("Complete response", String.valueOf(response.code()));

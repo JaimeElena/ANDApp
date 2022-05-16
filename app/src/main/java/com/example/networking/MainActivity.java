@@ -1,6 +1,7 @@
 package com.example.networking;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
@@ -80,6 +81,11 @@ public class MainActivity extends AppCompatActivity
     public void searchGamesByDate(View view)
     {
         viewModel.searchGamesbyDate("2022-02-12");
+    }
+
+    public void searchStandingsByConference(View view)
+    {
+        viewModel.searchStandingsByConference("west");
     }
 
 }
