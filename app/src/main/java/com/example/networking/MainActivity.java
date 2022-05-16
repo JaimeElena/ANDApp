@@ -1,7 +1,6 @@
 package com.example.networking;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
@@ -12,11 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import com.example.networking.Model.TempGame;
 import com.example.networking.ViewModel.BasketballViewModel;
-import com.example.networking.activities.GamesActivity;
-import com.example.networking.activities.StandingsActivity;
-import com.example.networking.activities.TeamsActivity;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 

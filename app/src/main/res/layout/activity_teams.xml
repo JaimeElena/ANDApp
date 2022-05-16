@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.networking.activities.TeamsActivity">
+    tools:context="com.example.networking.TeamsActivity">
 
     <TextView
         android:id="@+id/textView3"
@@ -18,10 +18,11 @@
 
     <ListView
         android:id="@+id/teamsList"
-        android:layout_width="408dp"
-        android:layout_height="682dp"
+        android:layout_width="411dp"
+        android:layout_height="680dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

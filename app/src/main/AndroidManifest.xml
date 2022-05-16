@@ -12,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Networking">
         <activity
-            android:name="com.example.networking.activities.StandingsActivity"
+            android:name=".TeamDetailsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.networking.activities.TeamsActivity"
+            android:name=".StandingsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.networking.activities.GamesActivity"
+            android:name=".TeamsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GamesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

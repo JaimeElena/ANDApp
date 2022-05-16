@@ -2,7 +2,9 @@ package com.example.networking.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Team
+import java.io.Serializable;
+
+public class Team implements Serializable
 {
     private int id;
 

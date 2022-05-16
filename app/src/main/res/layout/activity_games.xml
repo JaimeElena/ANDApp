@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.networking.activities.GamesActivity">
+    tools:context="com.example.networking.GamesActivity">
 
     <EditText
         android:id="@+id/date"

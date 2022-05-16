@@ -1,4 +1,4 @@
-package com.example.networking.activities;
+package com.example.networking;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -15,7 +15,6 @@ import android.widget.ListView;
 
 import com.example.networking.ViewModel.BasketballViewModel;
 import com.example.networking.Model.TempGame;
-import com.example.networking.R;
 import com.example.networking.adapters.GamesAdapter;
 
 import java.util.ArrayList;

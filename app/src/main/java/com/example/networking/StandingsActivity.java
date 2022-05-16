@@ -1,4 +1,4 @@
-package com.example.networking.activities;
+package com.example.networking;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
