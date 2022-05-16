@@ -5,4 +5,5 @@
     <string name="homeTeamScore">TextView</string>
     <string name="awayTeamScore" />
     <string name="awayTeamName" />
+    <string name="standingsTeamName" />
 </resources>

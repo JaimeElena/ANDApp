@@ -28,7 +28,7 @@ public class BasketballViewModel extends ViewModel
 
     public LiveData<List<StandingTeam>> getStandings(){return  repository.getStandings();}
 
-    public LiveData<List<Team>> getAllTeams(){return repository.getAllTeamsData();};
+    public LiveData<List<Team>> getAllTeams(){return repository.getAllTeamsData();}
 
 
     public void searchForTeam(int id)
@@ -37,7 +37,6 @@ public class BasketballViewModel extends ViewModel
     }
     public void searchGamesbyDate(String date){repository.getGamesByDate(date);}
     public void searchStandingsByConference(String conference){repository.getStandingsByConference(conference);}
-    public void searchAllTeams(){repository.getAllTeamsData();}
-
+    public void searchAllTeams(){repository.getAllTeams();}
 
 }

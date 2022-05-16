@@ -20,7 +20,7 @@ public class StandingTeam implements Comparable<StandingTeam> {
 
     public String toString()
     {
-        return team.getName() + " " + conference.getRank() + " " + conference.getWin() + " " + conference.getLoss();
+        return "                " + team.getName() + "        " + conference.getRank() + "        " + conference.getWin() + "        " + conference.getLoss();
     }
 
     @Override

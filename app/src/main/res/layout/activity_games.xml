@@ -13,13 +13,12 @@
         android:ems="10"
         android:hint="Select date"
         android:inputType="date"
-        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <Button
         android:id="@+id/search_button"
@@ -27,9 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginTop="44dp"
-        android:onClick="searchGamesByDate"
-
         android:text="Search"
+        android:onClick="searchGamesByDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/date"
@@ -37,8 +35,8 @@
 
     <ListView
         android:id="@+id/gameList"
-        android:layout_width="412dp"
-        android:layout_height="557dp"
+        android:layout_width="411dp"
+        android:layout_height="575dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -13,6 +13,6 @@ import com.example.networking.R;
 public class StandingsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_standings, container, false);
+        return null;
     }
 }

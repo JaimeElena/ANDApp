@@ -10,13 +10,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-
 import com.example.networking.Model.TempGame;
 import com.example.networking.ViewModel.BasketballViewModel;
 import com.example.networking.activities.GamesActivity;
 import com.example.networking.activities.StandingsActivity;
 import com.example.networking.activities.TeamsActivity;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         });
         goToGames();
         goToTeams();
-
+        goToStandings();
     }
     public void searchForTeam(View view)
     {

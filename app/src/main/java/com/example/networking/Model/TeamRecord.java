@@ -22,9 +22,9 @@ public class TeamRecord
         return loss;
     }
 
-    public int getPoints()
+    public String getPoints()
     {
-        return points;
+        return String.valueOf(points);
     }
 
     @Override

@@ -70,22 +70,10 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsAdapter.Stan
     }
 
     public static class StandingsViewHolder extends RecyclerView.ViewHolder {
-        private final TextView tvStandingsName;
-        private final TextView tvStandingsWin;
-        private final TextView tvStandingsLosses;
-        private final TextView tvStandingsPct;
-        private final TextView tvStandingsStreak;
-        private final TextView tvStandingsLastTen;
-        private final LinearLayout tableRowStandings;
+
         public StandingsViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvStandingsName = itemView.findViewById(R.id.tvStandingsName);
-            tvStandingsWin = itemView.findViewById(R.id.tvStandingsWin);
-            tvStandingsLosses = itemView.findViewById(R.id.tvStandingsLosses);
-            tvStandingsPct = itemView.findViewById(R.id.tvStandingsPct);
-            tvStandingsStreak = itemView.findViewById(R.id.tvStandingsStreak);
-            tvStandingsLastTen = itemView.findViewById(R.id.tvStandingsLastTen);
-            tableRowStandings = itemView.findViewById(R.id.tableRowStandings);
+
         }
 
 
