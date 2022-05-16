@@ -1,4 +1,4 @@
-package com.example.networking;
+package com.example.networking.network;
 
 import com.example.networking.Model.GameResponseClass;
 import com.example.networking.Model.ResponseClass;

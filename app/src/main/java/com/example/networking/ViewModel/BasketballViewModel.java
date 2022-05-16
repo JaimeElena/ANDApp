@@ -1,4 +1,4 @@
-package com.example.networking;
+package com.example.networking.ViewModel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.networking.Model.StandingTeam;
 import com.example.networking.Model.Team;
 import com.example.networking.Model.TempGame;
+import com.example.networking.network.BasketballRepository;
 
 import java.util.List;
 
@@ -18,14 +19,16 @@ public class BasketballViewModel extends ViewModel
         repository = BasketballRepository.getInstance();
     }
 
-    LiveData<Team> getSearchedTeam()
+    public LiveData<Team> getSearchedTeam()
     {
         return repository.getSearchedTeams();
     }
 
-    LiveData<List<TempGame>> getGamesByDate(){return  repository.getGamesByDate();}
+    public LiveData<List<TempGame>> getGamesByDate(){return  repository.getGamesByDate();}
 
-    LiveData<List<StandingTeam>> getStandings(){return  repository.getStandings();}
+    public LiveData<List<StandingTeam>> getStandings(){return  repository.getStandings();}
+
+    public LiveData<List<Team>> getAllTeams(){return repository.getAllTeamsData();};
 
 
     public void searchForTeam(int id)
@@ -34,6 +37,7 @@ public class BasketballViewModel extends ViewModel
     }
     public void searchGamesbyDate(String date){repository.getGamesByDate(date);}
     public void searchStandingsByConference(String conference){repository.getStandingsByConference(conference);}
+    public void searchAllTeams(){repository.getAllTeamsData();}
 
 
 }

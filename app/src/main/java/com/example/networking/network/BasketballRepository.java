@@ -1,4 +1,4 @@
-package com.example.networking;
+package com.example.networking.network;
 
 import android.util.Log;
 
@@ -54,8 +54,8 @@ public class BasketballRepository
         return gamesByDate;
     }
 
-    public MutableLiveData<Team> getSearchedTeam() {
-        return searchedTeam;
+    public MutableLiveData<List<Team>> getAllTeamsData() {
+        return allTeams;
     }
 
     public MutableLiveData<List<StandingTeam>> getStandings() {

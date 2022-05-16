@@ -35,7 +35,7 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsAdapter.Stan
 
     @Override
     public void onBindViewHolder(@NonNull StandingsAdapter.StandingsViewHolder holder, int position) {
-        int rowPos = holder.getAbsoluteAdapterPosition();
+       /* int rowPos = holder.getAbsoluteAdapterPosition();
         if (rowPos == 0) {
             holder.tableRowStandings.setBackgroundResource(R.color.purple_200);
             TextView tv;
@@ -50,9 +50,9 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsAdapter.Stan
         } else {
             Standings st = standings.get(rowPos - 1);
             holder.tableRowStandings.setBackgroundResource(0);
-           // Team team = new Team().getTeamById(st.getTeamId(), activity); // fix this
-           // String rankAndTeam = st.getConfRank() + "- " + team.getNickname();
-           // holder.tvStandingsName.setText(rankAndTeam);
+            // Team team = new Team().getTeamById(st.getTeamId(), activity); // fix this
+            // String rankAndTeam = st.getConfRank() + "- " + team.getNickname();
+            // holder.tvStandingsName.setText(rankAndTeam);
             holder.tvStandingsWin.setText(st.getWin());
             holder.tvStandingsLosses.setText(st.getLoss());
             holder.tvStandingsPct.setText(st.getWinPct());
@@ -60,6 +60,8 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsAdapter.Stan
             String lastTen = st.getLastTenWin() + "-" + st.getLastTenLoss();
             holder.tvStandingsLastTen.setText(lastTen);
         }
+
+        */
     }
 
     @Override
@@ -85,5 +87,7 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsAdapter.Stan
             tvStandingsLastTen = itemView.findViewById(R.id.tvStandingsLastTen);
             tableRowStandings = itemView.findViewById(R.id.tableRowStandings);
         }
+
+
     }
 }

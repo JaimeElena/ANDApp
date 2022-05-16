@@ -1,4 +1,4 @@
-package com.example.networking;
+package com.example.networking.Model;
 
 import com.example.networking.Model.Team;
 
