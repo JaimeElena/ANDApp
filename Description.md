@@ -31,6 +31,7 @@ Non-functional requirements:
 
 - [x] As a user I want the app to be intuitive and easy to use. 
 
+Note: The master branch contains all the code.
 YouTube video Link: https://www.youtube.com/watch?v=h7TvVB1uFqc
 
 Students who worked on the app:
