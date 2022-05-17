@@ -13,23 +13,30 @@ The app will allow the user to access a wide range of information, from the stan
 
 Requirements: 
 
--As a user I want to have a specific section for each sport. 
+- [x] As a user I want to have a specific section for each sport. 
 
--As a user I want to receive notifications every time one of my followed teams has some updates. 
+- [ ] As a user I want to receive notifications every time one of my followed teams has some updates. 
 
--As a user I want to have a home window where I can see the latest results of my followed teams. 
+- [x] As a user I want to have a home window where I can see the latest results of my followed teams. 
 
--As a user I want to see the standings of every major league in the most important sports. 
+- [x] As a user I want to see the standings of every major league in the most important sports. 
 
--As a user I want to be able to follow a specific event or tournament and receive notifications from it. 
+- [ ] As a user I want to be able to follow a specific event or tournament and receive notifications from it. 
 
--As a user I want to have a section featuring upcoming important events. 
+- [ ] As a user I want to have a section featuring upcoming important events. 
 
  
 
 Non-functional requirements: 
 
--As a user I want the app to be intuitive and easy to use. 
+- [x] As a user I want the app to be intuitive and easy to use. 
+
+Note: requirements marked as [x] are completed, the ones with [ ] are not.
+YouTube video Link: https://www.youtube.com/watch?v=h7TvVB1uFqc
+
+Students who worked on the app:
+Jaime Elena Tristan - 305950
+Alexandru-Emanuel Ignat - 304311
 
  
 
