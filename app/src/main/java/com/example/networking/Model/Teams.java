@@ -1,6 +1,8 @@
 package com.example.networking.Model;
 
-public class Teams
+import java.io.Serializable;
+
+public class Teams implements Serializable
 {
     private Team visitors;
     private Team home;

@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_game_details.xml" value="0.33" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_games.xml" value="0.33" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_standings.xml" value="0.358695652173913" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_standings_poactivity.xml" value="0.371875" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_team_details.xml" value="0.371875" />
+        <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_team_details2.xml" value="0.371875" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/activity_teams.xml" value="0.358695652173913" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/fragment_standings.xml" value="0.371875" />
         <entry key="..\:/Users/horse/AndroidStudioProjects/ANDApp/app/src/main/res/layout/games_layout.xml" value="0.27049180327868855" />

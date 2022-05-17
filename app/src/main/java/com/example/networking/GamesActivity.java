@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -28,22 +30,22 @@ public class GamesActivity extends AppCompatActivity {
     Button button;
     BasketballViewModel viewModel;
     GamesAdapter gamesAdapter;
-    private ListView gameList;
-    private List<String> gameListView;
+    private ListView gameListView;
+    private List<TempGame> gameList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
-        gameList = findViewById(R.id.gameList);
+        gameListView = findViewById(R.id.gameList);
         viewModel = new ViewModelProvider(this).get(BasketballViewModel.class);
-        gameListView = new ArrayList<>();
+        gameList = new ArrayList<>();
         date = (EditText) findViewById(R.id.date);
         viewModel.getGamesByDate().observe(this, games -> {
             for (TempGame game: games) {
-                gameListView.add(game.getTeams().getVisitor() + " " + game.getScores().getVisitors().getPoints() + " - " + game.getScores().getLocals().getPoints() + " " + game.getTeams().getLocal().getName());
+                gameList.add(game);
             }
-            ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, gameListView);
-            gameList.setAdapter(itemsAdapter);
+            ArrayAdapter<TempGame> itemsAdapter = new ArrayAdapter<TempGame>(this, android.R.layout.simple_list_item_1, gameList);
+            gameListView.setAdapter(itemsAdapter);
         });
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,10 +63,25 @@ public class GamesActivity extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
+        gameListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                TempGame game = (TempGame) gameListView.getItemAtPosition(i);
+                System.out.println(game);
+                seeSpecificGame(game);
+            }
+        });
     }
 
     public void searchGamesByDate(View view)
     {
-        viewModel.searchGamesbyDate("2022-02-12");
+        viewModel.searchGamesbyDate(date.getText().toString());
+        System.out.println(date.getText().toString());
+    }
+
+    public void seeSpecificGame(TempGame game) {
+        Intent intent = new Intent(this, GameDetailsActivity.class);
+        intent.putExtra("game", game);
+        startActivity(intent);
     }
 }

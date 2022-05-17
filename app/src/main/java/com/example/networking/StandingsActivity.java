@@ -53,9 +53,4 @@ public class StandingsActivity extends AppCompatActivity {
         //standingsTeamName = (TextView) getLayoutInflater().inflate(R.layout.table_list_standings, null);
         //linearLayout.addView(standingsTeamName);
     }
-
-    public void searchStandingsByConference(View view)
-    {
-        viewModel.searchStandingsByConference("west");
-    }
 }

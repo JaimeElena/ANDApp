@@ -1,6 +1,8 @@
 package com.example.networking.Model;
 
-public class TempGame
+import java.io.Serializable;
+
+public class TempGame implements Serializable
 {
     private int id;
     private String league;
@@ -38,6 +40,6 @@ public class TempGame
 
     public String toString()
     {
-        return "Id: " + id + " League: " + league + " Season: " + season + " "  + teams.getVisitor().getName()  +  " " + scores.getVisitors().getPoints() + " - "  + teams.getLocal().getName() + " "+ scores.getLocals().getPoints();
+        return teams.getVisitor().getName()  +  " " + scores.getVisitors().getPoints() + " - "  + teams.getLocal().getName() + " "+ scores.getLocals().getPoints();
     }
 }

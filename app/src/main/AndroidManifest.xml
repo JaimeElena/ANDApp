@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Networking">
         <activity
+            android:name=".GameDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".TeamDetailsActivity"
             android:exported="false" />
         <activity

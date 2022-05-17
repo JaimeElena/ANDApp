@@ -1,6 +1,8 @@
 package com.example.networking.Model;
 
-public class TeamRecord
+import java.io.Serializable;
+
+public class TeamRecord implements Serializable
 {
     private int win;
     private int loss;
