@@ -31,7 +31,6 @@ Non-functional requirements:
 
 - [x] As a user I want the app to be intuitive and easy to use. 
 
-Note: requirements marked as [x] are completed, the ones with [ ] are not.
 YouTube video Link: https://www.youtube.com/watch?v=h7TvVB1uFqc
 
 Students who worked on the app:
